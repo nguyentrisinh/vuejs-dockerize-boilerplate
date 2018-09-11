@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  nginx:
+    build:
+      context: ./app
+      dockerfile: prod.Dockerfile
+    container_name: vuejs_nginx
+    restart: always
+    ports:
+      - '8091:8091'
